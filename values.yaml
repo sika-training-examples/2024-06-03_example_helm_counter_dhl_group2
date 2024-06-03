@@ -1,0 +1,7 @@
+# Required
+backendHost:
+frontendHost:
+
+# Optional
+backendReplicas: 2
+frontendReplicas: 2
