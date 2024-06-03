@@ -1,3 +1,4 @@
+{{ if .Values.backendHost }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -10,7 +11,7 @@ spec:
         - {{ .Values.backendHost }}
       secretName: {{ .Values.backendHost }}-tls
   rules:
-    - host: {{ required ".Values.backendHost is required" .Values.backendHost }}
+    - host: {{ .Values.backendHost }}
       http:
         paths:
           - path: /
@@ -20,3 +21,4 @@ spec:
                 name: {{ .Release.Name }}-backend
                 port:
                   number: 80
+{{ end }}
