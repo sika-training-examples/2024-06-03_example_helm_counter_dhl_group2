@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: main
-          image: redis
+          image: {{ .Values.redisImage }}
           ports:
             - containerPort: 6379
           resources:

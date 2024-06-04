@@ -2,5 +2,9 @@
 backendHost:
 frontendHost:
 
+backendImage: ondrejsika/counter
+frontendImage: ghcr.io/ondrejsika/counter-frontend
+redisImage: redis
+
 backendReplicas: 2
 frontendReplicas: 2

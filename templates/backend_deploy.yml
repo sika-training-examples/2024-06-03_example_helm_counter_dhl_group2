@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: main
-          image: ondrejsika/counter
+          image: {{ .Values.backendImage }}
           ports:
             - containerPort: 80
           env:
